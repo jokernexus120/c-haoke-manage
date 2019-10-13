@@ -1,2 +1,3 @@
-c-haoke-manage.iml
+*.iml
+target
 .idea
