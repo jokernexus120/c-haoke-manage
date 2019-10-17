@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class HouseResourcesService {
 
+
+
+
     @Reference(version = "1.0.0")
     private ApiHouseResourcesService apiHouseResourcesService;
 

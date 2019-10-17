@@ -11,5 +11,11 @@
 
     <artifactId>c-haoke-manage-dubbo-server-house-resources-dubbo-interface</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

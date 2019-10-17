@@ -4,9 +4,13 @@ package com.c.haoke.dubbo.server.api.controller;
 import com.c.haoke.dubbo.server.api.service.HouseResourcesService;
 import com.c.haoke.dubbo.server.pojo.HouseResources;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.c.haoke.dubbo.server.api.vo.IdWorker;
+
+import java.util.Date;
 
 @RequestMapping("/house/resources")
 @RestController
@@ -14,6 +18,10 @@ public class HouseResourcesController {
 
     @Autowired
     private HouseResourcesService houseResourcesService;
+
+
+
+
 
     /**
      * 新增房源
@@ -25,7 +33,8 @@ public class HouseResourcesController {
     @ResponseBody
     public ResponseEntity<Void> save(@RequestBody HouseResources houseResources) {
 
-        System.out.println("=============RESOURCES===================================================");
+        System.out.println("=============RESOURCES===========");
+
 
         try {
             boolean bool = this.houseResourcesService.save(houseResources);
