@@ -1,6 +1,6 @@
 package com.c.haoke.dubbo.server.service;
 
-import com.c.haoke.dubbo.server.pojo.PicUploadResult;
+import com.c.haoke.dubbo.server.vo.PicUploadResult;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface PicUploadSystemService {

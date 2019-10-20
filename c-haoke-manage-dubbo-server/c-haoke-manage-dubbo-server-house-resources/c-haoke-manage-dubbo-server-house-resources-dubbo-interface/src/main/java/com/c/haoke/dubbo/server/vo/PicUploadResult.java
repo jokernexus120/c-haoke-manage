@@ -1,4 +1,4 @@
-package com.c.haoke.dubbo.server.pojo;
+package com.c.haoke.dubbo.server.vo;
 
 import java.io.Serializable;
 import java.util.Date;

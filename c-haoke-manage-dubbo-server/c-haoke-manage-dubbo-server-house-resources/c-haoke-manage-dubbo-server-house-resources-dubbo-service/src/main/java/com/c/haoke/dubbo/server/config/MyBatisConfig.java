@@ -1,7 +1,8 @@
 package com.c.haoke.dubbo.server.config;
 
 
-import com.c.haoke.dubbo.server.pojo.IdWorker;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.c.haoke.dubbo.server.vo.IdWorker;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,5 +17,14 @@ public class MyBatisConfig {
 
         return idWorker;
     }
+
+    /**
+     * 分页插件
+     */
+    @Bean
+    public PaginationInterceptor paginationInterceptor() {
+        return new PaginationInterceptor();
+    }
+
 
 }

@@ -3,7 +3,7 @@ package com.c.haoke.dubbo.server.api.service;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.c.haoke.dubbo.server.api.ApiPicUploadFileSystemService;
 import com.c.haoke.dubbo.server.api.vo.IdWorker;
-import com.c.haoke.dubbo.server.pojo.PicUploadResult;
+import com.c.haoke.dubbo.server.vo.PicUploadResult;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class PicUploadFileSystemService {
             return picUploadResult;
         }
         String filePath = getFilePath(imgName);
-        String url = filePath;
+        String url = StringUtils.replace(filePath,"//",File.separator);
         File file = new File(filePath);
 
         try
@@ -75,8 +75,9 @@ public class PicUploadFileSystemService {
         picUploadResult.setStatus("success");
         picUploadResult.setUploadTime(new Date());
         picUploadResult.setUrl(url);
+        picUploadResult.setName(url);
 
-        return null;
+        return picUploadResult;
     }
 
     private String getFilePath( String sourceImgName){

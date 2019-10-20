@@ -71,6 +71,20 @@ public abstract class BaseServiceImpl<T extends BasePojo>{
     }
 
     /**
+     * 根据条件分页查询数据列表
+     *
+     * @param queryWrapper
+     * @param page
+     * @param rows
+     * @return
+     */
+    public IPage<T> queryPageList( Integer page, Integer rows,
+                                   QueryWrapper<T> queryWrapper) {
+        // 获取分页数据
+        return this.mapper.selectPage(new Page<T>(page, rows), queryWrapper);
+    }
+
+    /**
      * 保存数据
      *
      * @param record

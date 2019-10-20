@@ -1,7 +1,7 @@
 package com.c.haoke.dubbo.server.api;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.c.haoke.dubbo.server.pojo.PicUploadResult;
+import com.c.haoke.dubbo.server.vo.PicUploadResult;
 import com.c.haoke.dubbo.server.service.PicUploadSystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;

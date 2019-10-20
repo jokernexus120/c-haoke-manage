@@ -1,4 +1,4 @@
-package com.c.haoke.dubbo.server.pojo;
+package com.c.haoke.dubbo.server.vo;
 
 import java.lang.management.ManagementFactory;
 import java.net.InetAddress;

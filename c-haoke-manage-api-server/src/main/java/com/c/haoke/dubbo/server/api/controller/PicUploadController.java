@@ -1,5 +1,5 @@
 package com.c.haoke.dubbo.server.api.controller;
-import com.c.haoke.dubbo.server.pojo.PicUploadResult;
+import com.c.haoke.dubbo.server.vo.PicUploadResult;
 import com.c.haoke.dubbo.server.api.service.PicUploadFileSystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

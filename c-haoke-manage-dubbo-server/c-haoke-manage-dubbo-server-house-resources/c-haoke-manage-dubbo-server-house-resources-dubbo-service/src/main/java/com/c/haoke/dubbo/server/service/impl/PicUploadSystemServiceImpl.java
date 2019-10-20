@@ -1,7 +1,7 @@
 package com.c.haoke.dubbo.server.service.impl;
 
-import com.c.haoke.dubbo.server.pojo.IdWorker;
-import com.c.haoke.dubbo.server.pojo.PicUploadResult;
+import com.c.haoke.dubbo.server.vo.IdWorker;
+import com.c.haoke.dubbo.server.vo.PicUploadResult;
 import com.c.haoke.dubbo.server.service.PicUploadSystemService;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
