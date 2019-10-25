@@ -13,7 +13,7 @@ import java.util.List;
 
 @Transactional
 @Service
-public class HouseResourcesServiceImpl extends BaseServiceImpl implements HouseResourcesService {
+public class HouseResourcesServiceImpl extends BaseServiceImpl<HouseResources> implements HouseResourcesService  {
 
     @Override
     public int saveHouseResources(HouseResources houseResources) {
@@ -46,5 +46,15 @@ public class HouseResourcesServiceImpl extends BaseServiceImpl implements HouseR
 
         PageInfo<HouseResources> pageInfo = new PageInfo<>(Long.valueOf(iPage.getTotal()).intValue(),page,pageSize,iPage.getRecords());
         return pageInfo;
+    }
+
+    @Override
+    public HouseResources queryHouseResourcesById(Long id) {
+        if (id!=null)
+        {
+            return null;
+        }
+
+        return super.queryById(id);
     }
 }

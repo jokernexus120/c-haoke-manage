@@ -23,4 +23,13 @@ public interface HouseResourcesService {
     PageInfo<HouseResources> queryHouseResourcesList(int page, int pageSize,
                                                      HouseResources queryCondition);
 
+    /**
+     * 根据ID搜索房源
+     * @param id
+     *
+     * @return  成功返回HouseResources
+     */
+
+    HouseResources queryHouseResourcesById(Long id);
+
 }

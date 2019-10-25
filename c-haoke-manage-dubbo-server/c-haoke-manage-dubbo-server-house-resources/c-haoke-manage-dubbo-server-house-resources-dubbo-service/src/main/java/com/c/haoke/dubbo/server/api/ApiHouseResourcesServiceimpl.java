@@ -44,5 +44,10 @@ public class ApiHouseResourcesServiceimpl implements ApiHouseResourcesService{
         return pageInfo;
     }
 
+    @Override
+    public HouseResources queryHouseResourcesById(Long id) {
+        return null;
+    }
+
 
 }
