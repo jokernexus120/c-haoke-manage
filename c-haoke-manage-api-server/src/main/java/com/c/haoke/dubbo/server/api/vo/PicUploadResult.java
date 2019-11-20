@@ -1,4 +1,4 @@
-package com.c.haoke.dubbo.server.vo;
+package com.c.haoke.dubbo.server.api.vo;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -3,7 +3,7 @@ package com.c.haoke.dubbo.server.api.service;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.c.haoke.dubbo.server.api.ApiPicUploadFileSystemService;
 import com.c.haoke.dubbo.server.api.vo.IdWorker;
-import com.c.haoke.dubbo.server.vo.PicUploadResult;
+import com.c.haoke.dubbo.server.api.vo.PicUploadResult;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,11 +102,13 @@ public class PicUploadFileSystemService {
         return  path;
     }
 
+/*
     public PicUploadResult uploadPic2(MultipartFile img){
         PicUploadResult result = apiPicUploadFileSystemService.uploadPic(img);
 
         return result;
     }
+*/
 
     public void printCJL(){
         apiPicUploadFileSystemService.printCJL();;

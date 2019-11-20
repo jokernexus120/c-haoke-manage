@@ -33,4 +33,11 @@ public interface ApiHouseResourcesService {
 
     HouseResources queryHouseResourcesById(Long id);
 
-}
+
+    /**
+     * 更新房源数据
+     *
+     * @param houseResources
+     * @return
+     */
+    boolean updateHouseResources(HouseResources houseResources);}

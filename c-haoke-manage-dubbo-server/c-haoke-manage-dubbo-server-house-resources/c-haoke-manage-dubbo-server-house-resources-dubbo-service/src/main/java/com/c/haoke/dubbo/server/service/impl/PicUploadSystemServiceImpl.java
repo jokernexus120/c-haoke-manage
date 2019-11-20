@@ -1,17 +1,10 @@
 package com.c.haoke.dubbo.server.service.impl;
 
 import com.c.haoke.dubbo.server.vo.IdWorker;
-import com.c.haoke.dubbo.server.vo.PicUploadResult;
 import com.c.haoke.dubbo.server.service.PicUploadSystemService;
-import org.apache.commons.lang3.StringUtils;
-import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.stereotype.Service;
-
-import java.io.File;
-import java.util.Date;
 
 @Service
 public class PicUploadSystemServiceImpl implements PicUploadSystemService {
@@ -25,6 +18,7 @@ public class PicUploadSystemServiceImpl implements PicUploadSystemService {
     private static final String[] IMAGE_TYPE = new String[]{".bmp", ".jpg",
             ".jpeg", ".gif", ".png"};
 
+/*
     public PicUploadResult uploadPic(MultipartFile img){
 
         boolean isLegal = false;
@@ -92,6 +86,7 @@ public class PicUploadSystemServiceImpl implements PicUploadSystemService {
 
         return  path;
     }
+*/
 
     @Override
     public void printCJL() {

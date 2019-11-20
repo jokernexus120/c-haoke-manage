@@ -49,5 +49,13 @@ public class ApiHouseResourcesServiceimpl implements ApiHouseResourcesService{
         return null;
     }
 
+    @Override
+    public boolean updateHouseResources(HouseResources houseResources) {
+
+        System.out.println(houseResources);
+        System.out.println("----------------------------updateHouseResources---------------------------------");
+        return this.houseResourcesService.updateHouseResources(houseResources);
+    }
+
 
 }

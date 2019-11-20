@@ -34,4 +34,9 @@ public class HouseResourcesService {
 
         return this.apiHouseResourcesService.queryHouseResourcesById(id);
     }
+
+    public boolean update(HouseResources houseResources){
+
+        return this.apiHouseResourcesService.updateHouseResources(houseResources);
+    }
 }

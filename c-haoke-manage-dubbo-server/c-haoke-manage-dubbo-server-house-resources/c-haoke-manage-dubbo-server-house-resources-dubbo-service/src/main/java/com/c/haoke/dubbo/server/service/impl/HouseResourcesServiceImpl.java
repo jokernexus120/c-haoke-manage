@@ -4,12 +4,11 @@ import com.alibaba.dubbo.common.utils.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.c.haoke.dubbo.server.pojo.HouseResources;
+import com.c.haoke.dubbo.server.serviceimpl.BaseServiceImpl;
 import com.c.haoke.dubbo.server.service.HouseResourcesService;
 import com.c.haoke.dubbo.server.vo.PageInfo;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 @Transactional
 @Service
@@ -56,5 +55,15 @@ public class HouseResourcesServiceImpl extends BaseServiceImpl<HouseResources> i
         }
 
         return super.queryById(id);
+    }
+
+    @Override
+    public boolean updateHouseResources(HouseResources houseResources) {
+        System.out.println(houseResources);
+        System.out.println("----------------------------updateHouseResources---------------------------------");
+
+        boolean result = (super.update(houseResources)==1);
+        System.out.println(result);
+        return result;
     }
 }

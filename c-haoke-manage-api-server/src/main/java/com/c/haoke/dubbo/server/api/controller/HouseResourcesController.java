@@ -26,7 +26,10 @@ public class HouseResourcesController {
      * @param houseResources json数据
      * @return
      */
+/*
     @PostMapping("/save")
+*/
+    @PostMapping()
     @ResponseBody
     public ResponseEntity<Void> save(@RequestBody HouseResources houseResources) {
 
@@ -53,7 +56,8 @@ public class HouseResourcesController {
      * @param pageSize
      * @return
      */
-    @GetMapping("/searchhouse")
+    /*@GetMapping("/searchhouse")*/
+    @GetMapping()
     @ResponseBody
     public ResponseEntity<TableResult> list(HouseResources houseResources,
                                             @RequestParam(name = "currentPage",
@@ -69,10 +73,35 @@ public class HouseResourcesController {
      *
      * @return
      */
+/*
     @GetMapping("/save")
     @ResponseBody
     public ResponseEntity<String> get() {
         return ResponseEntity.ok("ok");
+    }
+*/
+
+    /**
+     * 修改房源
+     *
+     * @param houseResources json数据
+     * @return
+     */
+    @PutMapping
+    @ResponseBody
+    public ResponseEntity<Void> update(@RequestBody HouseResources houseResources) {
+        System.out.println("update---------------------------------------------------");
+        HouseResources houseResources2 = houseResources;
+        System.out.println(houseResources2);
+        try {
+            boolean bool = this.houseResourcesService.update(houseResources);
+            if (bool) {
+                return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
     }
 
 }

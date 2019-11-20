@@ -3,6 +3,7 @@ package com.c.haoke.dubbo.server.pojo;
 import java.io.Serializable;
 import java.util.Date;
 
+
 public abstract class BasePojo implements Serializable {
 
     private Date created;

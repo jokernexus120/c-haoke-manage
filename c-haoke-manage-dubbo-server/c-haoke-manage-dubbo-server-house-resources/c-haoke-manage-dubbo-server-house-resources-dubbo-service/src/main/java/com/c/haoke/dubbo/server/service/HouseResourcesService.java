@@ -32,4 +32,12 @@ public interface HouseResourcesService {
 
     HouseResources queryHouseResourcesById(Long id);
 
+    /**
+     * 更新房源
+     * @param houseResources
+     *
+     * @return  成功返回ture
+     */
+    boolean updateHouseResources(HouseResources houseResources);
+
 }

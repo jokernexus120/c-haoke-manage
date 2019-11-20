@@ -1,13 +1,10 @@
 package com.c.haoke.dubbo.server.vo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
 import java.util.Collections;
 import java.util.List;
 
+public class  PageInfo<T> implements java.io.Serializable {
 
-public class PageInfo<T> implements java.io.Serializable {
 
     private static final long serialVersionUID = -2105385689859184204L;
 
@@ -83,4 +80,6 @@ public class PageInfo<T> implements java.io.Serializable {
                 ", records=" + records +
                 '}';
     }
+
+
 }
