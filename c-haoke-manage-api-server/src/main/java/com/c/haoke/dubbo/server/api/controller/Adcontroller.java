@@ -27,9 +27,9 @@ public class Adcontroller {
     @GetMapping("/redis")
     public void  redis(){
         System.out.println("AD-------------------------------进来了");
-        redisTemplate.opsForValue().set("kk", "vv" );
+        redisTemplate.opsForValue().set("bb", "cc" );
 
-        String value = redisTemplate.opsForValue().get("kk");
+        String value = redisTemplate.opsForValue().get("bb");
         System.out.println(value);
         System.out.println("finish");
 

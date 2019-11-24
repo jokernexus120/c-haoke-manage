@@ -21,7 +21,7 @@ public class PicUploadController {
     @PostMapping
     @ResponseBody
     public PicUploadResult uploadPic(@RequestParam("file") MultipartFile multipartFile){
-
+        System.out.println("进入uploadPic");
 
         return  picUploadFileSystemService.uploadPic1(multipartFile);
     }

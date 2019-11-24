@@ -13,7 +13,6 @@ import sun.nio.ch.IOUtil;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
-
 @Component
 public class RedisCacheInterceptor implements HandlerInterceptor {
 
@@ -26,8 +25,10 @@ public class RedisCacheInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         System.out.println("被RedisCacheInterceptor拦截了");
-        if (!StringUtils.equalsIgnoreCase(request.getMethod(),"get"))
+        boolean isGetRequest = StringUtils.equalsIgnoreCase(request.getMethod(),"get");
+        if (!isGetRequest)
         {
+            System.out.println("放行");
             return true;
         }
         String redisKey =  getRedisKey(request);

@@ -42,6 +42,7 @@ public class HouseResourcesController {
             if (bool) {
                 return ResponseEntity.status(HttpStatus.CREATED).build();
             }
+            System.out.println("存入 houseResources");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -14,7 +14,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.Duration;
-
 @ControllerAdvice
 public class MyResponseBodyAdvice implements ResponseBodyAdvice {
 
@@ -39,7 +38,8 @@ public class MyResponseBodyAdvice implements ResponseBodyAdvice {
 
         HttpServletRequest httpServletRequest = ((ServletServerHttpRequest) serverHttpRequest).getServletRequest();
 
-     try{
+
+        try{
          String redisKey = RedisCacheInterceptor.getRedisKey(httpServletRequest);
          String redisValue = "";
          if (object instanceof String)
@@ -50,7 +50,7 @@ public class MyResponseBodyAdvice implements ResponseBodyAdvice {
              redisValue = mapper.writeValueAsString(object);
 
          }
-         this.redisTemplate.opsForValue().set(redisKey,redisValue,Duration.ofHours(1));
+         this.redisTemplate.opsForValue().set(redisKey,redisValue,Duration.ofMinutes(5));
          System.out.println("Input:");
          System.out.println("rediskey "+redisKey);
          System.out.println("redisValue "+redisValue);
